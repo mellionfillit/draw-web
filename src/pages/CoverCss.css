@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  
+  [class^="box-"] {
+    
+    /* Размещаем контейнеры по центру */
+    display: grid;
+    place-items: center;
+  }
+  
+  .container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "B B B B   A A A A   A A A A"
+    "C C C C   A A A A   A A A A"
+    "C C C C   A A A A   A A A A"
+    "C C C C   A A A A   A A A A"
+    "C C C C   A A A A   A A A A ";
+  }
+  
+  .box-1 {
+    grid-area: A;
+    background-color: skyblue;
+    
+    align-content: end;
+  }
+  .box-2 {
+    grid-area: B;
+    background-color: pink;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .box-3 {
+    grid-area: C;
+    background-color: lightgreen;
+    grid-template-rows: repeat(2, 1fr);
+    align-content : space-evenly;
+  }
+  .box-3 button{
+    width: 50px;
+    height: 30px;
+    border-radius: 20%;
+    border-color: rgb(121, 211, 121);
+    background-color: rgb(199, 240, 215);
+    border-style: inset;
+  
+  }
