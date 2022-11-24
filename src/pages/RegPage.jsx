@@ -1,14 +1,14 @@
 import {SignUp} from '../comp/SignUp'
 import React from 'react'
 import {Link} from "react-router-dom"
+import  '../comp/Stl.css'
 
 function RegPage() {
   return (
-    <div>
-      <h1>Register</h1>
+    <div class="cnvs">
         <SignUp/>
-      <p>
-        Уже есть аккаунт? <Link to="/login">Войти</Link>
+      <p class="p">
+        Уже есть аккаунт? <Link class="link" to="/login">Войти</Link>
       </p>
 
     </div>

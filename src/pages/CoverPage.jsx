@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate} from 'react-router-dom';
+import {  Navigate} from 'react-router-dom';
 import { CirclePicker } from 'react-color'
 import "./CoverCss.css"
 import { useAuth } from '../hooks/use-auth';
@@ -11,7 +11,7 @@ export function CoverPage(){
   const [currentColor,setCurrentColor]=useState("#fff")
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
-  const navigate=useNavigate();
+  
   const dispatch=useDispatch();
   const {isAuth, email} = useAuth();
 
@@ -85,13 +85,12 @@ export function CoverPage(){
           <button onClick={()=>
             {
               dispatch(removeUser())
-              navigate('/login')
               }}>Выйти</button>
         </div>
   
       </div>
     ):(
-      navigate('/login')
+      <Navigate replace to="/login" />
     );
 }
 export default CoverPage;

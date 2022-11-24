@@ -5,6 +5,7 @@ import {setUser} from '../store/slices/userSlice'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {useNavigate} from 'react-router-dom'
 
+
 const Login = () => {
   const dispatch=useDispatch();
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ const Login = () => {
   return (
     <div>
       <Form
-      title="Войти"
+      title="Войти" 
       handleClick={handleLogin}
       />
     </div>
